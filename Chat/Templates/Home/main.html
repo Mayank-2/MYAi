@@ -1,0 +1,81 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<!-- ########################################################################### -->
+<div class="container mx-0 cont">
+    <div class="row my-2">
+        <div class="col-md-3">
+
+            <div class="side_main">
+                <h4 class="text-center">MyAi</h4>
+                <p style="margin-left: 10px;">Today</p>
+                <div class="scroll1 mt-0">
+                    {% if askdata %}
+                    {% for i in askdata %}
+                    <div class="d-flex align-items-center text-center justify-content-center">
+                        <div class="mx-3 border border-secondary">
+                            <p class="msg">{{i.body}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <h6 class="text-center">There is no conversation today</h6>
+                    {% endif %}
+                </div>
+                <div class="bottom">
+                    <h4 style="margin-left: 10px;">{{user}}</h4>
+                    <a href="{% url 'clear' %}"><button class="btn text-white">Clear Conversation</button></a>
+                    <a href="{% url 'logout' %}"><button class="btn text-white">Logout</button></a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-9">
+            <div class="main py-1">
+                <div class="px-4 py-2 scroll">
+                    <div class="d-flex align-items-center">
+                        <div class="text-left pr-1"><img src="/static/img/iro.jpg" width="30" height="30"
+                                class="img1" />
+                        </div>
+                        <div class="mx-1">
+                            <span class="name" style="color: rgb(0, 26, 255);font-weight: bold;">MyAi</span>
+                            <p class="msg1">Hello How can i help You ?</p>
+                        </div>
+                    </div>
+                    {% block main %}
+                    {% endblock %}
+
+                </div>
+
+                <div class="justify-content-center px-1 py-1">
+                    <form action="{% url 'chat' %}" method="post">
+                        {% csrf_token %}
+                        <nav
+                            class="navbar bg-white navbar-expand-sm navbar-fixed-bottom d-flex justify-content-between ">
+                            <div class="form-outline form-white">
+                                <input type="text number" name="ques" class="form-control Send_mes"
+                                    placeholder="Send a message......">
+
+                            </div>
+                            <button class="btn1 mx-2" type="submit"><i
+                                    class="fa fa-arrow-circle-right icon2"></i></button>
+                        </nav>
+                    </form>
+                </div>
+            </div>
+            <!-- </div> -->
+
+        </div>
+    </div>
+</div>
+<!-- ################################################################################# -->
+
+
+<script>
+    var objDiv = document.getElementById("botdata1");
+    objDiv.scrollTop = objDiv.scrollHeight;
+</script>
+{% endblock %}

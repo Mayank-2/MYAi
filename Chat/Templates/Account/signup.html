@@ -1,0 +1,36 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<link href="{% static 'css/login.css' %}" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Kanit:400,300,700' rel='stylesheet' type='text/css'>
+
+<section class="py-5">
+    <div class="container py-5">
+        <div class="text-center fw-bold"><h3>Create your account</h3></div>
+            <!-- <div class="text-center "><h6>Note that phone verification may be required for signup.</h6></div> -->
+        <div class="container py-2">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="container ">
+                            {% for fm in form %}
+                            <div class="form-group mb-2">
+                                {{fm.label_tag}} {{fm}} <small>{{fm.errors|striptags}}</small>
+                            </div>
+                            {% endfor %}
+                            <button type="submit" class="login_bt">Signup</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                    <div class="text-center pt-1">Already have an account ? <a class="text-success" style="text-decoration: none;"
+                        href="{% url 'login' %}">Log in</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

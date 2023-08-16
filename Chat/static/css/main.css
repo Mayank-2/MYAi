@@ -1,0 +1,181 @@
+/* body {
+    background-image: url("/static/img/home.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+
+    
+} */
+/* background: -webkit-linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1));
+    background: linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1)) */
+
+/* #######################################################3 */
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+::-webkit-scrollbar-track {
+    background: #939393;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.wrapper {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+
+}
+.cont{
+    width: 100%;
+}
+
+.side_main {
+    background-color: #1e1e1e;
+    width: auto;
+    height: 729px;
+    position: relative;
+    color: white;
+    margin-left: 0px;
+
+    /* padding: 6px 0px 0px 0px; */
+
+}
+
+.main {
+    background-color: #f9f8f8;
+    width:1180px;
+    position: relative;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.scroll {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 666px;
+    
+}
+
+.scroll1 {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 550px;
+    background-color: #5b5d5b;
+    
+}
+
+.img1 {
+    border-radius: 50%;
+    background-color: #66BB6A;
+
+}
+
+.name {
+    font-size: 8px;
+
+}
+
+/* Asker */
+.msg {
+    background-color: #e9e9e9;
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: 500;
+    color: #000000;
+}
+
+/* Bot answer */
+.msg1 {
+    background-color: #ebebeb;
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: 500;
+    color: hsl(0, 0%, 0%);
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 10px;
+}
+
+
+
+
+.form-control {
+    font-size: 12px;
+    font-weight: 400;
+    width: 550px;
+    height: 30px;
+    border: none;
+
+}
+
+form-control:focus {
+    box-shadow: none;
+    overflow: hidden;
+    border: none;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.icon2 {
+    color: #00ff04 !important;
+    font-size: 25px !important;
+    position: relative;
+    padding: 0px;
+    cursor: pointer;
+
+}
+
+.Send_mes {
+    font-size: 16px;
+    
+}
+
+
+.icondiv {
+
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    position: relative;
+    bottom: 1px;
+
+}
+
+.btn1 {
+    /* background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(215, 215, 215)); */
+    /* font-weight: bold; */
+    border: none;
+}
+
+
+
+@media (max-width: 767px) {
+    .form-control {
+
+        width: 230px;
+
+
+    }
+
+}

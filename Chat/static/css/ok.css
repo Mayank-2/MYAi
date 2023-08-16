@@ -1,0 +1,22 @@
+body {
+    background-image: url("/static/img/wallpaperflare.com_wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.upper {
+    margin-top: 250px;
+}
+
+h1,h4 {
+    font-weight: bold;
+    color: white;
+}
+
+.btn {
+    background: linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1));
+    font-weight: bold;
+
+}

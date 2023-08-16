@@ -1,0 +1,27 @@
+{% extends 'Home/main.html' %}
+{% load static %}
+{% block title %}{{user}}{% endblock %}
+
+{% block main %}
+
+    {% for i , j in list %}
+    <div class="d-flex align-items-center text-right justify-content-end ">
+        <div class="mx-2">
+            <span class="name" style="color: red;font-weight: bold;">{{i.asker}}</span>
+            <p class="msg">{{i.body}}</p>
+        </div>
+        <div><img src="https://i.imgur.com/HpF4BFG.jpg" width="30" class="img1" /></div>
+
+    </div>
+    <div class="d-flex align-items-center" id="botdata1">
+        <div class="text-left"><img src="/static/img/iro.jpg" width="30" height="30" class="img1" />
+        </div>
+        <div class="mx-2">
+            <span class="name" style="color: rgb(0, 26, 255);font-weight: bold;">MyAi</span>
+            <p class="msg1">{{j.BotAns}}</p>
+        </div>
+    </div>
+    
+    {% endfor %}
+    
+{% endblock %}

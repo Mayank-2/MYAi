@@ -1,0 +1,29 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<link href="{% static 'css/ok.css' %}" rel="stylesheet">
+<section>
+    <div class="container">
+        <div class="container upper">
+            <div class="row">
+                <h1>THE VIRTUAL</h1>
+                <h1>WORLD</h1>
+            </div>
+            <div class="row">
+                <div class="">
+                    <a href="{% url 'main' %}"><button class="btn">TRY IT FOR FREE</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="container lower py-5">
+            <div class="row">
+                <div class="">
+                    <h4>Meet the new<br>artificial intelligence</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
