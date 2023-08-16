@@ -7,7 +7,7 @@ from Chat.models import BotAi, Asker, Askerbody, Botbody
 from django.contrib.auth import logout
 
 # Set up the OpenAI API client
-openai.api_key = "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"
+openai.api_key = "API KEY" # I had to remove the original API key for security
 
 # Set up the model and prompt
 model_engine = "text-davinci-003"
